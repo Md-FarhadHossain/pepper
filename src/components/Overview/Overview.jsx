@@ -8,7 +8,7 @@ const Overview = () => {
   return (
     <section className="container mx-auto lg:px-24 px-4">
       <div className="bg-[#151531] rounded-[2rem] relative lg:py-20 py-10 px-7">
-        <div className="left-0 absolute">
+        <div className="left-0 lg:top-[2.022rem] md:top-[2.022rem]  absolute">
           <img className="lg:block md:block hidden" src={oc2} alt="overview-cus-2" />
           <img className="lg:hidden md:hidden block" src={ocr2} alt="overview-cus-2" />
         </div>
@@ -42,7 +42,7 @@ const Overview = () => {
           </div>
         </div>
 
-        <div className="absolute right-0 lg:bottom-8 md:bottom-8 bottom-2">
+        <div className="absolute right-0 lg:bottom-[1.676rem] md:bottom-[1.676rem] bottom-[0.349rem]">
           <img className="lg:block md:block hidden" src={oc1} alt="overview-cus-1" />
           <img className="lg:hidden md:hidden block" src={ocr1} alt="overview-cus-2" />
         </div>
