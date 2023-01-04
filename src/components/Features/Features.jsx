@@ -45,15 +45,24 @@ const Features = () => {
         },
     ]
   return (
-    <section className='container mx-auto lg:px-0 px-4 mt-[8.75rem]'>
+    <section className='container mx-auto px-4 mt-[8.75rem] lg:px-10'>
        <div className='grid gap-[6.25rem]'>
        {
-            features.map(feature => <div className='flex items-center justify-between' key={feature.id}>
+            features.map(feature => <div className='flex items-center lg:justify-between md:justify-center gap-10 justify-center flex-wrap' key={feature.id}>
+                
+                <div className='lg:block md:hidden hidden'>
                 {
                     feature.align ? '' : <><div>
                     <img src={feature.image} alt={feature.title} />
                 </div></>
                 }
+                </div>
+
+                <div className='lg:hidden md:block block'>
+                    <img src={feature.image} alt={feature.title} />
+                </div>
+
+               
                 <div className='w-[26.25rem]'>
                     <h1 className='text-5xl font-bold leading-tight'>{feature.title}</h1>
                     <p className='mb-10 mt-[0.774rem]'>{feature.description}</p>
@@ -62,11 +71,13 @@ const Features = () => {
                     </ul>
                 </div>
 
+                <div className='lg:block md:hidden hidden'>
                 {
                     feature.align ? <><div>
                     <img src={feature.image} alt={feature.title} />
                 </div></> : ''
                 }
+                </div>
             </div>)
         }
        </div>
