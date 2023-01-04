@@ -70,7 +70,7 @@ const Services = () => {
         {/* Services */}
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10">
             {
-                services.map(service => <div className="bg-white px-10 py-[2.875rem] shadow-sm rounded-[1.875rem]" key={service.id}>
+                services.map(service => <div className="bg-white px-10 py-[2.875rem] shadow-2xl shadow-[#15153115] rounded-[1.875rem]" key={service.id}>
                    <div className="h-14 w-14 flex items-center justify-center bg-[#9D0AFF] rounded-2xl">
                         <img className="" src={service.icon} alt={service.title} />
                    </div>

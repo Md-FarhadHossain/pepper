@@ -1,4 +1,5 @@
 import React from 'react'
+import AboutCompany from '../components/AboutCompany/AboutCompany'
 import Features from '../components/Features/Features'
 import HeroSection from '../components/HeroSection/HeroSection'
 import Navbar from '../components/Navbar/Navbar'
@@ -16,6 +17,7 @@ const Main = () => {
         <Overview />
         <Services />
         <Features />
+        <AboutCompany />
     </>
   )
 }
