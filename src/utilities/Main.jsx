@@ -1,4 +1,5 @@
 import React from 'react'
+import Features from '../components/Features/Features'
 import HeroSection from '../components/HeroSection/HeroSection'
 import Navbar from '../components/Navbar/Navbar'
 import Overview from '../components/Overview/Overview'
@@ -14,6 +15,7 @@ const Main = () => {
         <TrustedTeam />
         <Overview />
         <Services />
+        <Features />
     </>
   )
 }
