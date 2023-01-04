@@ -46,14 +46,18 @@ const Services = () => {
     <section>
       <div className="container mx-auto px-4 lg:px-0 mt-[8.75rem]">
         <div className="text-center mb-[3.75rem]">
-          <div className="text-5xl font-bold leading-tight">
-            <h1>Supercharge your</h1>
+          <div className="lg:text-5xl text-[1.75rem] font-bold">
+            <h1 className="lg:mb-5 mb-0">Supercharge your</h1>
             <h1>workflow to get started</h1>
           </div>
 
-          <p className="text-[0.938rem] font-medium pt-[0.898rem]">
+          <p className="text-[0.938rem] font-medium pt-[0.898rem] lg:block md:block hidden">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
             Suspendisse varius enim in eros elementum tristique.
+          </p>
+          <p className="text-[0.938rem] font-medium pt-[0.898rem] lg:hidden md:hidden block">
+            Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.
+            Suspendisse varius enim in <br /> eros elementum tristique.
           </p>
         </div>
 
@@ -65,7 +69,7 @@ const Services = () => {
                    <div className="h-14 w-14 flex items-center justify-center bg-[#9D0AFF] rounded-2xl">
                         <img className="" src={service.icon} alt={service.title} />
                    </div>
-                    <h1 className="text-2xl font-bold mt-7">{service.title}</h1>
+                    <h1 className="text-2xl  font-bold mt-7">{service.title}</h1>
                     <p className="mt-[0.824rem]">{service.description}</p>
                 </div>)
             }
