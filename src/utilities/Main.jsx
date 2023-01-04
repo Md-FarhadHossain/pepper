@@ -1,6 +1,7 @@
 import React from 'react'
 import AboutCompany from '../components/AboutCompany/AboutCompany'
 import Features from '../components/Features/Features'
+import Footer from '../components/Footer/Footer'
 import GetStarted from '../components/GetStarted/GetStarted'
 import HeroSection from '../components/HeroSection/HeroSection'
 import Navbar from '../components/Navbar/Navbar'
@@ -20,6 +21,7 @@ const Main = () => {
         <Features />
         <AboutCompany />
         <GetStarted />
+        <Footer />
     </>
   )
 }
