@@ -90,7 +90,7 @@ const Features = () => {
     },
   ];
   return (
-    <section className="container mx-auto px-4 mt-[8.75rem] lg:px-10">
+    <section className="container mx-auto px-4 mt-[8.75rem] lg:px-10 mb-[8.75rem]">
       <div className="grid gap-[6.25rem]">
         {features.map((feature) => (
           <div

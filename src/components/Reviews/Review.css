@@ -1,0 +1,26 @@
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 40));
+    }
+  }
+  
+  .slider {
+    height: 100px;
+    margin: auto;
+    /* overflow: hidden; */
+    position: relative;
+    width: auto;
+  }
+  .slider .slide-track {
+    animation: scroll 180s linear infinite;
+    width: calc(350px * 40);
+    display: flex;
+  }
+  .slider .slide {
+    height: 100px;
+    width: 500px;
+  }
+  

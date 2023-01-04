@@ -23,7 +23,7 @@ const AboutCompany = () => {
 
   return (
     <section>
-      <div className="container mx-auto px-4 lg:px-0 mt-[8.75rem] flex items-center justify-between lg:gap-[11.25rem] gap-[3.75rem] lg:flex-nowrap flex-wrap">
+      <div className="container mx-auto px-4 lg:px-0 mt-[24.813rem] flex items-center justify-between lg:gap-[11.25rem] gap-[3.75rem] lg:flex-nowrap flex-wrap ">
 
       {/* Left side */}
 
