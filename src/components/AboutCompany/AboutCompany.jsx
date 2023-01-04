@@ -21,9 +21,9 @@ const AboutCompany = () => {
 
   return (
     <section>
-      <div className="container mx-auto px-4 lg:px-0 mt-[8.75rem] flex items-center justify-between gap-[11.25rem]">
+      <div className="container mx-auto px-4 lg:px-0 mt-[8.75rem] flex items-center justify-between lg:gap-[11.25rem] gap-[3.75rem] lg:flex-nowrap flex-wrap">
         <div>
-          <h1 className="w-[23.746rem] text-5xl font-bold leading-normal">
+          <h1 className="w-[23.746rem] text-[1.75rem] lg:text-5xl md:text-4xl font-bold leading-normal">
             Build a powerful website for your startup.
           </h1>
           <p className="w-[22.966rem] font-medium mt-[0.848rem] mb-10">
@@ -31,20 +31,25 @@ const AboutCompany = () => {
             vivamus ipsum aliquet consectetur aliquam.
           </p>
 
-          <button className="btn bg-[#9D0AFF]">Read more</button>
+          <button className="btn border-none normal-case text-[0.938rem] px-[2.043rem] py-3 rounded-2xl h-[3.55rem] bg-[#9D0AFF]">Read more</button>
         </div>
 
         {/* informations */}
-        <div className="flex items-center gap-10">
+        <div className="flex items-center lg:flex-nowrap flex-wrap gap-10">
           <div className="grid gap-10">
             {informations.map((information) => (
-              <div className="bg-white py-10 rounded-[1.875rem] shadow-2xl shadow-[#15153115] px-8" key={information.id}>
+              <div
+                className="bg-white py-10 rounded-[1.875rem] shadow-2xl shadow-[#15153115] px-8"
+                key={information.id}
+              >
                 <div className="bg-[#9D0AFF] w-14 h-14 flex items-center justify-center rounded-2xl mb-[1.375rem]">
                   <img src={information.icon} alt={information.title} />
                 </div>
 
                 <div>
-                  <h1 className="font-bold text-[1.375rem] mb-[0.537rem]">{information.title}</h1>
+                  <h1 className="font-bold text-[1.375rem] mb-[0.537rem]">
+                    {information.title}
+                  </h1>
                   <p>{information.description}</p>
                 </div>
               </div>
@@ -57,7 +62,9 @@ const AboutCompany = () => {
             </div>
 
             <div>
-              <h1 className="font-bold text-[1.375rem] mb-[0.537rem]">Global community</h1>
+              <h1 className="font-bold text-[1.375rem] mb-[0.537rem]">
+                Global community
+              </h1>
               <p>
                 Bibendum feugiat mauris, malesuada nulla leo porta et. Nunc
                 eleifend aliquet nullam nec sit gravida ac
