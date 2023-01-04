@@ -2,6 +2,8 @@ import React from "react";
 import about1 from "../../assets/about-1.png";
 
 const AboutCompany = () => {
+
+  // company data
   const informations = [
     {
       id: 1,
@@ -22,15 +24,20 @@ const AboutCompany = () => {
   return (
     <section>
       <div className="container mx-auto px-4 lg:px-0 mt-[8.75rem] flex items-center justify-between lg:gap-[11.25rem] gap-[3.75rem] lg:flex-nowrap flex-wrap">
+
+      {/* Left side */}
+
         <div>
+          {/* Title */}
           <h1 className="w-[23.746rem] text-[1.75rem] lg:text-5xl md:text-4xl font-bold leading-normal">
             Build a powerful website for your startup.
           </h1>
+          {/* Description */}
           <p className="w-[22.966rem] font-medium mt-[0.848rem] mb-10">
             Orci molestie nam vulputate nunc habitant gravida. Interdum vitae
             vivamus ipsum aliquet consectetur aliquam.
           </p>
-
+          {/* Button */}
           <button className="btn border-none normal-case text-[0.938rem] px-[2.043rem] py-3 rounded-2xl h-[3.55rem] bg-[#9D0AFF]">Read more</button>
         </div>
 
@@ -56,6 +63,7 @@ const AboutCompany = () => {
             ))}
           </div>
 
+          {/* Number 3 information */}
           <div className="bg-white py-10 px-8 shadow-2xl shadow-[#15153115] rounded-[1.875rem]">
             <div className="bg-[#9D0AFF] w-14 h-14 flex items-center justify-center rounded-2xl mb-[1.375rem]">
               <img src={about1} alt="/" />

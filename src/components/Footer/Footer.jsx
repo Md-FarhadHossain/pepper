@@ -32,34 +32,48 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="mt-[12.368rem] lg:block md:block hidden">
-            <p className="text-sm">© All rights reserved. <span className="text-[#00F59B]">Farhad Hossain</span>. Powered by <span className="text-[#9D0AFF]">Farhad</span>.</p>
+            <p className="text-sm">
+              © All rights reserved.{" "}
+              <span className="text-[#00F59B]">Farhad Hossain</span>. Powered by{" "}
+              <span className="text-[#9D0AFF]">Farhad</span>.
+            </p>
           </div>
         </div>
-        <div className="flex gap-[4.983rem] text-base">
-        <div className="flex flex-col gap-4 ext-[#FFFAFF]">
 
-          <span className="font-bold text-xl text-[#FFFAFF]">Pages main</span>
-          <a className="link link-hover">Home</a>
-          <a className="link link-hover">Blog</a>
-          <a className="link link-hover">Pricing</a>
-          <a className="link link-hover">Pricing Ecommerce</a>
-          <a className="link link-hover">About</a>
-          <a className="link link-hover">Careers</a>
-          <a className="link link-hover">Careers Template</a>
-          <a className="link link-hover">Contact</a>
-          
-        </div>
-        <div  className="flex flex-col text-[#FFFAFF] gap-4">
-          <span className="font-bold text-xl text-[#FFFAFF]">Template pages</span>
-          <a className="link link-hover">Style guide</a>
-          <a className="link link-hover">Licenses</a>
-          <a className="link link-hover">Changelog</a>
-        </div>
+        {/* Footer link */}
+        <div className="flex gap-[4.983rem] text-base">
+
+            {/* Pages main */}
+          <div className="flex flex-col gap-4 ext-[#FFFAFF]">
+            <span className="font-bold text-xl text-[#FFFAFF]">Pages main</span>
+            <a className="link link-hover">Home</a>
+            <a className="link link-hover">Blog</a>
+            <a className="link link-hover">Pricing</a>
+            <a className="link link-hover">Pricing Ecommerce</a>
+            <a className="link link-hover">About</a>
+            <a className="link link-hover">Careers</a>
+            <a className="link link-hover">Careers Template</a>
+            <a className="link link-hover">Contact</a>
+          </div>
+
+          {/* Template pages */}
+          <div className="flex flex-col text-[#FFFAFF] gap-4">
+            <span className="font-bold text-xl text-[#FFFAFF]">
+              Template pages
+            </span>
+            <a className="link link-hover">Style guide</a>
+            <a className="link link-hover">Licenses</a>
+            <a className="link link-hover">Changelog</a>
+          </div>
         </div>
         {/* Copyright */}
         <div className="mt-20 lg:hidden md:hidden block">
-            <p className="text-sm">© All rights reserved. <span className="text-[#00F59B]">Farhad Hossain</span>. Powered by <span className="text-[#9D0AFF]">Farhad</span>.</p>
-          </div>
+          <p className="text-sm">
+            © All rights reserved.{" "}
+            <span className="text-[#00F59B]">Farhad Hossain</span>. Powered by{" "}
+            <span className="text-[#9D0AFF]">Farhad</span>.
+          </p>
+        </div>
       </footer>
     </div>
   );

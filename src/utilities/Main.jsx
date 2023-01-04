@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutCompany from '../components/AboutCompany/AboutCompany'
+import Breaking from '../components/Breaking/Breaking'
 import Features from '../components/Features/Features'
 import Footer from '../components/Footer/Footer'
 import GetStarted from '../components/GetStarted/GetStarted'
@@ -17,6 +18,7 @@ const Main = () => {
         <HeroSection />
         <TrustedTeam />
         <Overview />
+        <Breaking />
         <Services />
         <Features />
         <AboutCompany />

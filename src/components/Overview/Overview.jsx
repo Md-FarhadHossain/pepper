@@ -6,7 +6,7 @@ import ocr2 from '../../assets/overview-cus-res-2.png'
 
 const Overview = () => {
   return (
-    <section className="container mx-auto lg:px-24 px-4">
+    <section className="container mx-auto lg:px-24 px-4  mb-[8.75rem]">
       <div className="bg-[#151531] rounded-[2rem] relative lg:py-20 py-10 px-7">
         <div className="left-0 lg:top-[2.022rem] md:top-[2.022rem]  absolute">
           <img className="lg:block md:block hidden" src={oc2} alt="overview-cus-2" />
