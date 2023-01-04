@@ -7,7 +7,7 @@ import email from "../../assets/email.png";
 const Footer = () => {
   return (
     <div className="bg-[#151531]">
-      <footer className="footer mt-[8.75rem] container mx-auto pb-[3.8rem] py-[6.25rem] text-neutral-content">
+      <footer className="footer mt-[8.75rem] px-4 lg:px-0 container mx-auto pb-[3.8rem] py-[6.25rem] text-neutral-content">
         <div>
           {/* Logo */}
           <img src={logo} alt="logo" />
@@ -31,12 +31,14 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <div className="mt-[12.368rem]">
+          <div className="mt-[12.368rem] lg:block md:block hidden">
             <p className="text-sm">© All rights reserved. <span className="text-[#00F59B]">Farhad Hossain</span>. Powered by <span className="text-[#9D0AFF]">Farhad</span>.</p>
           </div>
         </div>
-        <div>
-          <span className="footer-title">Pages main</span>
+        <div className="flex gap-[4.983rem] text-base">
+        <div className="flex flex-col gap-4 ext-[#FFFAFF]">
+
+          <span className="font-bold text-xl text-[#FFFAFF]">Pages main</span>
           <a className="link link-hover">Home</a>
           <a className="link link-hover">Blog</a>
           <a className="link link-hover">Pricing</a>
@@ -47,12 +49,17 @@ const Footer = () => {
           <a className="link link-hover">Contact</a>
           
         </div>
-        <div>
-          <span className="footer-title">Template pages</span>
+        <div  className="flex flex-col text-[#FFFAFF] gap-4">
+          <span className="font-bold text-xl text-[#FFFAFF]">Template pages</span>
           <a className="link link-hover">Style guide</a>
           <a className="link link-hover">Licenses</a>
           <a className="link link-hover">Changelog</a>
         </div>
+        </div>
+        {/* Copyright */}
+        <div className="mt-20 lg:hidden md:hidden block">
+            <p className="text-sm">© All rights reserved. <span className="text-[#00F59B]">Farhad Hossain</span>. Powered by <span className="text-[#9D0AFF]">Farhad</span>.</p>
+          </div>
       </footer>
     </div>
   );
