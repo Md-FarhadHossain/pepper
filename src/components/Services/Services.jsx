@@ -1,5 +1,10 @@
 import React from "react";
 import icon1 from '../../assets/service-1.png'
+import icon2 from '../../assets/service-2.png'
+import icon3 from '../../assets/service-3.png'
+import icon4 from '../../assets/service-4.png'
+import icon5 from '../../assets/service-5.png'
+import icon6 from '../../assets/service-6.png'
 
 const Services = () => {
 
@@ -12,31 +17,31 @@ const Services = () => {
         },
         {
             id: 2,
-            icon: icon1,
+            icon: icon2,
             title: 'Campaign Calender',
             description: 'Vitae massa euismod enim dictum facilisi aliquam, elit, pretium. Id laoreet suscipit vel sagittis non commodo semper.'
         },
         {
             id: 3,
-            icon: icon1,
+            icon: icon3,
             title: 'Personal assistance',
             description: 'Vitae massa euismod enim dictum facilisi aliquam, elit, pretium. Id laoreet suscipit vel sagittis non commodo semper.'
         },
         {
             id: 4,
-            icon: icon1,
+            icon: icon4,
             title: 'Payment feature',
             description: 'Vitae massa euismod enim dictum facilisi aliquam, elit, pretium. Id laoreet suscipit vel sagittis non commodo semper.'
         },
         {
             id: 5,
-            icon: icon1,
+            icon: icon5,
             title: 'Utility apps',
             description: 'Vitae massa euismod enim dictum facilisi aliquam, elit, pretium. Id laoreet suscipit vel sagittis non commodo semper.'
         },
         {
             id: 6,
-            icon: icon1,
+            icon: icon6,
             title: 'Sale notification',
             description: 'Vitae massa euismod enim dictum facilisi aliquam, elit, pretium. Id laoreet suscipit vel sagittis non commodo semper.'
         },
