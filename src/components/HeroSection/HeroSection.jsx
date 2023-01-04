@@ -4,7 +4,7 @@ import heroImage from '../../assets/hero-image.png'
 const HeroSection = () => {
   return (
     <section className='py-20'>
-        <div className='text-center'>
+        <div data-aos="zoom-in" data-aos-duration="2000" className='text-center'>
 
             {/* Hero Title */}
             <h1 className="text-6xl lg:block md:block hidden text-[#151531] font-bold leading-tight">Save more and get your <br /> finances right</h1>
@@ -19,7 +19,8 @@ const HeroSection = () => {
         </div>
 
         {/* Hero bottom image */}
-        <div className='flex justify-center w-full'>
+        <div data-aos="fade-up"
+     data-aos-duration="2000" className='flex justify-center w-full'>
             <img className='w-full lg:px-2 px-0' src={heroImage} alt="heroImage" />
         </div>
     </section>

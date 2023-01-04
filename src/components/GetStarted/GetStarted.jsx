@@ -11,7 +11,7 @@ import gs8 from "../../assets/get-start-8.png";
 
 const GetStarted = () => {
   return (
-    <div>
+    <div data-aos="flip-up" data-aos-duration="2000">
         <section className="container mt-[8.75rem] mx-auto lg:px-24 px-4">
       <div className="bg-[#151531] rounded-[2rem] relative lg:py-20 py-10 px-7">
         <div className="left-0 top-0 absolute">

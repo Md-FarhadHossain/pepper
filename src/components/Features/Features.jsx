@@ -104,18 +104,33 @@ const Features = () => {
                 ""
               ) : (
                 <>
-                  <div>
+                  <div
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"
+                  >
                     <img src={feature.image} alt={feature.title} />
                   </div>
                 </>
               )}
             </div>
 
-            <div className="lg:hidden md:block block px-[2.344rem] lg:px-0">
+            <div
+              data-aos="flip-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              className="lg:hidden md:block block px-[2.344rem] lg:px-0"
+            >
               <img src={feature.image} alt={feature.title} />
             </div>
 
-            <div className="lg:px-0 px-[1.219rem]">
+            <div
+              data-aos="fade-left"
+              // data-aos-offset="300"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-sine"
+              className="lg:px-0 px-[1.219rem]"
+            >
               <div className="lg:w-[26.25rem] w-full">
                 <h1 className="text-5xl font-bold leading-tight">
                   {feature.title}
@@ -130,7 +145,11 @@ const Features = () => {
             >
               {feature.align ? (
                 <>
-                  <div>
+                  <div
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"
+                  >
                     <img src={feature.image} alt={feature.title} />
                   </div>
                 </>
