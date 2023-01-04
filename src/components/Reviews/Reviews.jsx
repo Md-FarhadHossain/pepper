@@ -109,11 +109,21 @@ const Reviews = () => {
   return (
     <div className="grid gap-[2.625rem]">
       <div className=" -translate-x-32">
-        <div data-aos="fade-left" data-aos-duration="3000" className="flex gap-[2.625rem]">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          data-aos-anchor-placement="top-center"
+          className="flex gap-[2.625rem]"
+        >
           {breakings.map((breaking) => (
-            <div className="slide shadow-2xl shadow-[#15153115]" key={breaking.id}>
+            <div
+              className="slide shadow-2xl shadow-[#15153115]"
+              key={breaking.id}
+            >
               <div className="py-10 px-8 gap-3 bg-white w-[520px] h-[290px] rounded-[1.875rem]">
-                <p className="text-black text-[1.375rem] max-w-max">{breaking.title}</p>
+                <p className="text-black text-[1.375rem] max-w-max">
+                  {breaking.title}
+                </p>
 
                 <div className="rating mt-[1.537rem] mb-[1.563rem]">
                   <input
@@ -154,11 +164,20 @@ const Reviews = () => {
         </div>
       </div>
       <div className="">
-        <div data-aos="fade-right" data-aos-duration="3000" className="flex gap-[2.625rem]">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="3000"
+          className="flex gap-[2.625rem]"
+        >
           {breakings2.map((breaking) => (
-            <div className="slide shadow-2xl shadow-[#15153115]" key={breaking.id}>
+            <div
+              className="slide shadow-2xl shadow-[#15153115]"
+              key={breaking.id}
+            >
               <div className="py-10 px-8 gap-3 bg-white w-[520px] h-[290px] rounded-[1.875rem]">
-                <p className="text-black text-[1.375rem] max-w-max">{breaking.title}</p>
+                <p className="text-black text-[1.375rem] max-w-max">
+                  {breaking.title}
+                </p>
 
                 <div className="rating mt-[1.537rem] mb-[1.563rem]">
                   <input

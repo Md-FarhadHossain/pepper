@@ -2,7 +2,6 @@ import React from "react";
 import about1 from "../../assets/about-1.png";
 
 const AboutCompany = () => {
-
   // company data
   const informations = [
     {
@@ -24,8 +23,7 @@ const AboutCompany = () => {
   return (
     <section>
       <div className="container mx-auto px-4 lg:px-0 mt-[12.813rem] flex items-center justify-between lg:gap-[11.25rem] gap-[3.75rem] lg:flex-nowrap flex-wrap ">
-
-      {/* Left side */}
+        {/* Left side */}
 
         <div>
           {/* Title */}
@@ -38,15 +36,19 @@ const AboutCompany = () => {
             vivamus ipsum aliquet consectetur aliquam.
           </p>
           {/* Button */}
-          <button className="btn border-none normal-case text-[0.938rem] px-[2.043rem] py-3 rounded-2xl h-[3.55rem] bg-[#9D0AFF]">Read more</button>
+          <button className="btn border-none normal-case text-[0.938rem] px-[2.043rem] py-3 rounded-2xl h-[3.55rem] bg-[#9D0AFF]">
+            Read more
+          </button>
         </div>
 
         {/* informations */}
         <div className="flex items-center lg:flex-nowrap flex-wrap gap-10">
           <div className="grid gap-10">
             {informations.map((information) => (
-              <div data-aos="flip-left"
-              data-aos-duration="2000"
+              <div
+                data-aos="flip-left"
+                data-aos-duration="2000"
+                data-aos-anchor-placement="top-center"
                 className="bg-white py-10 rounded-[1.875rem] shadow-2xl shadow-[#15153115] px-8"
                 key={information.id}
               >
@@ -65,7 +67,12 @@ const AboutCompany = () => {
           </div>
 
           {/* Number 3 information */}
-          <div data-aos="flip-right" data-aos-duration="2000" className="bg-white py-10 px-8 shadow-2xl shadow-[#15153115] rounded-[1.875rem]">
+          <div
+            data-aos="flip-right"
+            data-aos-duration="2000"
+            data-aos-anchor-placement="top-center"
+            className="bg-white py-10 px-8 shadow-2xl shadow-[#15153115] rounded-[1.875rem]"
+          >
             <div className="bg-[#9D0AFF] w-14 h-14 flex items-center justify-center rounded-2xl mb-[1.375rem]">
               <img src={about1} alt="/" />
             </div>

@@ -1,16 +1,29 @@
 import React from "react";
 import oc1 from "../../assets/overview-cus-1.png";
 import oc2 from "../../assets/overview-cus-2.png";
-import ocr1 from '../../assets/overview-cus-res-1.png'
-import ocr2 from '../../assets/overview-cus-res-2.png'
+import ocr1 from "../../assets/overview-cus-res-1.png";
+import ocr2 from "../../assets/overview-cus-res-2.png";
 
 const Overview = () => {
   return (
-    <section data-aos="flip-down" data-aos-duration="2000" className="container mx-auto lg:px-24 px-4  mb-[8.75rem]">
+    <section
+      data-aos="flip-down"
+      data-aos-duration="2000"
+      data-aos-anchor-placement="top-center"
+      className="container mx-auto lg:px-24 px-4  mb-[8.75rem]"
+    >
       <div className="bg-[#151531] rounded-[2rem] relative lg:py-20 py-10 px-7">
         <div className="left-0 lg:top-[2.022rem] md:top-[2.022rem]  absolute">
-          <img className="lg:block md:block hidden" src={oc2} alt="overview-cus-2" />
-          <img className="lg:hidden md:hidden block" src={ocr2} alt="overview-cus-2" />
+          <img
+            className="lg:block md:block hidden"
+            src={oc2}
+            alt="overview-cus-2"
+          />
+          <img
+            className="lg:hidden md:hidden block"
+            src={ocr2}
+            alt="overview-cus-2"
+          />
         </div>
 
         <div className="flex flex-col justify-center items-center text-center">
@@ -43,11 +56,18 @@ const Overview = () => {
         </div>
 
         <div className="absolute right-0 lg:bottom-[1.676rem] md:bottom-[1.676rem] bottom-[0.349rem]">
-          <img className="lg:block md:block hidden" src={oc1} alt="overview-cus-1" />
-          <img className="lg:hidden md:hidden block" src={ocr1} alt="overview-cus-2" />
+          <img
+            className="lg:block md:block hidden"
+            src={oc1}
+            alt="overview-cus-1"
+          />
+          <img
+            className="lg:hidden md:hidden block"
+            src={ocr1}
+            alt="overview-cus-2"
+          />
         </div>
       </div>
-     
     </section>
   );
 };

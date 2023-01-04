@@ -108,6 +108,7 @@ const Features = () => {
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000"
+                    data-aos-anchor-placement="top-center"
                   >
                     <img src={feature.image} alt={feature.title} />
                   </div>
@@ -119,6 +120,7 @@ const Features = () => {
               data-aos="flip-left"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
+              data-aos-anchor-placement="top-center"
               className="lg:hidden md:block block px-[2.344rem] lg:px-0"
             >
               <img src={feature.image} alt={feature.title} />
@@ -129,6 +131,7 @@ const Features = () => {
               // data-aos-offset="300"
               data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
+              data-aos-anchor-placement="top-center"
               className="lg:px-0 px-[1.219rem]"
             >
               <div className="lg:w-[26.25rem] w-full">
@@ -148,6 +151,7 @@ const Features = () => {
                   <div
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
+                    data-aos-anchor-placement="top-center"
                     data-aos-duration="2000"
                   >
                     <img src={feature.image} alt={feature.title} />
