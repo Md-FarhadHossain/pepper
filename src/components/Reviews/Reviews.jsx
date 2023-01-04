@@ -112,7 +112,7 @@ const Reviews = () => {
         <div
           data-aos="fade-left"
           data-aos-duration="3000"
-          data-aos-anchor-placement="top-center"
+          
           className="flex gap-[2.625rem]"
         >
           {breakings.map((breaking) => (

@@ -57,7 +57,7 @@ const Services = () => {
       <div
         data-aos="fade-up"
         data-aos-duration="2000"
-        data-aos-anchor-placement="top-center"
+        
         className="container mx-auto px-4 lg:px-0 mt-[8.75rem]"
       >
         <div className="text-center mb-[3.75rem]">
@@ -82,7 +82,7 @@ const Services = () => {
             <div
               data-aos="flip-up"
               data-aos-duration="2000"
-              data-aos-anchor-placement="top-center"
+              
               className="bg-white px-10 py-[2.875rem] shadow-2xl shadow-[#15153115] rounded-[1.875rem]"
               key={service.id}
             >

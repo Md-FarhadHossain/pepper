@@ -7,7 +7,7 @@ const TrustedTeam = () => {
     <section
       data-aos="fade-up"
       data-aos-duration="2000"
-      data-aos-anchor-placement="top-center"
+      
       className="flex justify-center flex-col container mx-auto items-center py-28"
     >
       <p className="text-[#15153183] text-lg pb-8">

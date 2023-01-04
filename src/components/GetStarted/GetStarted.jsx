@@ -13,7 +13,7 @@ const GetStarted = () => {
     <div
       data-aos="flip-up"
       data-aos-duration="2000"
-      data-aos-anchor-placement="top-center"
+      
     >
       <section className="container mt-[8.75rem] mx-auto lg:px-24 px-4">
         <div className="bg-[#151531] rounded-[2rem] relative lg:py-20 py-10 px-7">

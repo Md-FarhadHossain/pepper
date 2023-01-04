@@ -9,7 +9,7 @@ const Overview = () => {
     <section
       data-aos="flip-down"
       data-aos-duration="2000"
-      data-aos-anchor-placement="top-center"
+      
       className="container mx-auto lg:px-24 px-4  mb-[8.75rem]"
     >
       <div className="bg-[#151531] rounded-[2rem] relative lg:py-20 py-10 px-7">

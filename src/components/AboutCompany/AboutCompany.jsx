@@ -48,7 +48,7 @@ const AboutCompany = () => {
               <div
                 data-aos="flip-left"
                 data-aos-duration="2000"
-                data-aos-anchor-placement="top-center"
+                
                 className="bg-white py-10 rounded-[1.875rem] shadow-2xl shadow-[#15153115] px-8"
                 key={information.id}
               >
@@ -70,7 +70,7 @@ const AboutCompany = () => {
           <div
             data-aos="flip-right"
             data-aos-duration="2000"
-            data-aos-anchor-placement="top-center"
+            
             className="bg-white py-10 px-8 shadow-2xl shadow-[#15153115] rounded-[1.875rem]"
           >
             <div className="bg-[#9D0AFF] w-14 h-14 flex items-center justify-center rounded-2xl mb-[1.375rem]">
