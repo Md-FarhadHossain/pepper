@@ -22,9 +22,8 @@
 - [Overview](#overview)
   - [Built With](#built-with)
 - [How to use](#how-to-use)
-- [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
-- [Features](#features)
+- [Contact](#contact)
 
 <!-- OVERVIEW -->
 
