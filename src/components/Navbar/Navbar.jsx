@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/logo.png";
 import cartIcon from "../../assets/cart-icon.png";
 import hamburger from "../../assets/hamburger-menu.png";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../context/AuthContext";
 
 const Navbar = () => {
+  const {logo} = useContext(UserContext)
+  console.log(logo)
   const menu = (
     <>
       <li>
@@ -30,7 +33,7 @@ const Navbar = () => {
       <div className="navbar container px-4 lg:px-0 mx-auto">
         <div className="navbar-start">
           <Link to='/' className="cursor-pointer">
-            <img src={logo} alt="logo" />
+            <img className="w-[20%]" src={logo} alt="logo" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
