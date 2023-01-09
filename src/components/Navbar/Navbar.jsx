@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import cartIcon from "../../assets/cart-icon.png";
-import { BiMenu } from "react-icons/bi";
 import hamburger from "../../assets/hamburger-menu.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const menu = (
@@ -29,9 +29,9 @@ const Navbar = () => {
     <div>
       <div className="navbar container px-4 lg:px-0 mx-auto">
         <div className="navbar-start">
-          <a className="cursor-pointer">
+          <Link to='/' className="cursor-pointer">
             <img src={logo} alt="logo" />
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{menu}</ul>
@@ -42,12 +42,12 @@ const Navbar = () => {
             Cart
           </a>
           <div className=" hidden md:hidden lg:block">
-            <a className="btn btn-outline border-[#9D0AFF] text-[#9D0AFF] capitalize">
+            <Link to='/login' className="btn btn-outline border-[#9D0AFF] text-[#9D0AFF] capitalize">
               Login
-            </a>
-            <a className="btn bg-[#9D0AFF] border-none ml-6 capitalize">
+            </Link>
+            <Link to='/signup' className="btn bg-[#9D0AFF] border-none ml-6 capitalize">
               Get started
-            </a>
+            </Link>
           </div>
 
           {/* Responsive dropdown menu */}
@@ -64,14 +64,14 @@ const Navbar = () => {
             >
               {menu}
               <li>
-                <a className="btn btn-outline border-[#9D0AFF] text-[#9D0AFF] capitalize">
+                <Link to='/login' className="btn btn-outline border-[#9D0AFF] text-[#9D0AFF] capitalize">
                   Login
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="btn  relative bg-[#9D0AFF] border-none mt-2 text-white capitalize">
+                <Link to='/signup' className="btn  relative bg-[#9D0AFF] border-none mt-2 text-white capitalize">
                   Get started
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
