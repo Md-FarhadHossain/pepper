@@ -4,7 +4,9 @@ import heroImage from "../../assets/hero-image.png";
 const HeroSection = () => {
   return (
     <section className="py-20">
-      <div data-aos="zoom-in" data-aos-duration="2000" className="text-center">
+      <div data-aos="zoom-in"
+       data-aos-duration="2000"
+        className="text-center">
         {/* Hero Title */}
         <h1 className="text-6xl lg:block md:block hidden text-[#151531] font-bold leading-tight">
           Save more and get your <br /> finances right

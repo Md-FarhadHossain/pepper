@@ -73,7 +73,7 @@ const Breaking = () => {
   ];
 
   return (
-    <section>
+    <section id="slider__section">
       <div className="slider">
         <div className="slide-track grid gap-[2.625rem]">
           {breakings2.map((breaking) => (

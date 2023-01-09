@@ -15,7 +15,7 @@ import TrustedTeam from '../components/TrustedTeam/TrustedTeam'
 const Main = () => {
   return (
     <>
-        <Navbar />
+        {/* <Navbar /> */}
         <HeroSection />
         <TrustedTeam />
         <Overview />

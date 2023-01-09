@@ -6,7 +6,10 @@
     transform: translateX(calc(-250px * 40));
   }
 }
-
+#slider__section {
+  overflow-x: hidden;
+  width: 100vw;
+}
 .slider {
   height: 100px;
   margin: auto;

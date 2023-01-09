@@ -1,10 +1,10 @@
-import Main from "./utilities/Main";
+import Route from "./utilities/Route";
 
 
 function App() {
   return (
     <div>
-      <Main />
+      <Route />
     </div>
   );
 }
