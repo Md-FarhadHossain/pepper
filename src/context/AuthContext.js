@@ -19,7 +19,8 @@ const AuthContext = ({ children }) => {
   const auth = getAuth(app);
   const [user, setUser] = useState();
   const [loading, setLoading] = useState(true);
-  const [logo, setLogo] = useState('')
+  const [logoImage, setLogoImage] = useState('')
+  const [logoUpload, setLogoUpload] = useState(false)
 
  
 
@@ -56,7 +57,7 @@ const AuthContext = ({ children }) => {
 
 
 
-  const authValue = { signup, login, user,signout,signinWithGoogle,loading,setLogo,logo };
+  const authValue = { signup, login, user,signout,signinWithGoogle,loading,setLogoImage,logoImage,logoUpload, setLogoUpload };
   return (
     <div>
       <UserContext.Provider value={authValue}>{children}</UserContext.Provider>

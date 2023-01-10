@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import cartIcon from "../../assets/cart-icon.png";
 import hamburger from "../../assets/hamburger-menu.png";
@@ -6,8 +6,22 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../../context/AuthContext";
 
 const Navbar = () => {
-  const {logo} = useContext(UserContext)
-  console.log(logo)
+  const {logoImage,logoUpload} = useContext(UserContext)
+  const [logo, setLogo] = useState('')
+
+
+  useEffect(() => {
+    fetch('http://localhost:5000/logo')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      setLogo(data?.logo)
+    })
+
+  
+  }, [logoUpload])
+  
+  
   const menu = (
     <>
       <li>
@@ -33,7 +47,7 @@ const Navbar = () => {
       <div className="navbar container px-4 lg:px-0 mx-auto">
         <div className="navbar-start">
           <Link to='/' className="cursor-pointer">
-            <img className="w-[20%]" src={logo} alt="logo" />
+            <img className="w-[7.5rem] h-[2.125rem] object-contain" src={logo} alt="logo" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

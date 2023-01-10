@@ -12,11 +12,11 @@ const CounterUpdate = () => {
   }, []);
 
   return (
-    <div>
+    <div className="w-full container mx-auto px-24 mt-16">
       <h1 className="text-4xl mb-16 font-bold text-center ">
-        Upload your logo for Update
+      "Request a demo" button {buttonTapped?.length} time's clicked
       </h1>
-      <h1> {buttonTapped?.length}</h1>
+      <h1 className="text-center text-5xl"> {buttonTapped?.length}</h1>
     </div>
   );
 };
