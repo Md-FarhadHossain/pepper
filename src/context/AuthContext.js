@@ -19,45 +19,52 @@ const AuthContext = ({ children }) => {
   const auth = getAuth(app);
   const [user, setUser] = useState();
   const [loading, setLoading] = useState(true);
-  const [logoImage, setLogoImage] = useState('')
-  const [logoUpload, setLogoUpload] = useState(false)
-
- 
+  const [logoImage, setLogoImage] = useState("");
+  const [logoUpload, setLogoUpload] = useState(false);
 
   // GoogleAuthProvider
-  const googleProvider = new GoogleAuthProvider()
+  const googleProvider = new GoogleAuthProvider();
   // Singup
   const signup = (email, password) => {
-    setLoading(true)
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
   // Login
   const login = (email, password) => {
-    setLoading(true)
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   // Signout
   const signout = () => {
-    setLoading(true)
+    setLoading(true);
     return signOut(auth);
   };
   // Singin with google
   const signinWithGoogle = () => {
-    setLoading(true)
-    return signInWithPopup(auth, googleProvider)
-  }
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
       console.log(user);
-      setLoading(false)
+      setLoading(false);
     });
     return () => unsubscribe();
   }, []);
 
-
-
-  const authValue = { signup, login, user,signout,signinWithGoogle,loading,setLogoImage,logoImage,logoUpload, setLogoUpload };
+  const authValue = {
+    signup,
+    login,
+    user,
+    signout,
+    signinWithGoogle,
+    loading,
+    setLogoImage,
+    logoImage,
+    logoUpload,
+    setLogoUpload,
+  };
   return (
     <div>
       <UserContext.Provider value={authValue}>{children}</UserContext.Provider>

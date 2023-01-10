@@ -6,22 +6,27 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../../context/AuthContext";
 
 const Navbar = () => {
-  const {logoImage,logoUpload} = useContext(UserContext)
-  const [logo, setLogo] = useState('')
+  const { logoImage, logoUpload, user, signout} = useContext(UserContext);
 
+  const [logo, setLogo] = useState("");
 
   useEffect(() => {
-    fetch('http://localhost:5000/logo')
-    .then(res => res.json())
-    .then(data => {
-      console.log(data)
-      setLogo(data?.logo)
-    })
+    fetch("http://localhost:5000/logo")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setLogo(data?.logo);
+      });
+  }, [logoUpload]);
 
-  
-  }, [logoUpload])
-  
-  
+  // handle SignOut
+  const handleSignOut = (event) => {
+    event.preventDefault()
+    signout()
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
+  }
+
   const menu = (
     <>
       <li>
@@ -46,8 +51,12 @@ const Navbar = () => {
     <div>
       <div className="navbar container px-4 lg:px-0 mx-auto">
         <div className="navbar-start">
-          <Link to='/' className="cursor-pointer">
-            <img className="w-[7.5rem] h-[2.125rem] object-contain" src={logo} alt="logo" />
+          <Link to="/" className="cursor-pointer">
+            <img
+              className="w-[7.5rem] h-[2.125rem] object-contain"
+              src={logo}
+              alt="logo"
+            />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -59,12 +68,40 @@ const Navbar = () => {
             Cart
           </a>
           <div className=" hidden md:hidden lg:block">
-            <Link to='/login' className="btn btn-outline border-[#9D0AFF] text-[#9D0AFF] capitalize">
-              Login
-            </Link>
-            <Link to='/signup' className="btn bg-[#9D0AFF] border-none ml-6 capitalize">
-              Get started
-            </Link>
+            {user ? (
+              <>
+                <Link
+                  to="/dashboard/update-heading"
+                  className="btn bg-[#9D0AFF] border-none capitalize"
+                >
+                  Dashbord
+                </Link>
+                <button
+                 onClick={handleSignOut}
+                  className="btn bg-red-500 border-none capitalize ml-6"
+                >
+                  Sign Out
+                </button>
+
+
+              </>
+            ) : (
+              <>
+                {" "}
+                <Link
+                  to="/login"
+                  className="btn btn-outline border-[#9D0AFF] text-[#9D0AFF] capitalize"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/signup"
+                  className="btn bg-[#9D0AFF] border-none ml-6 capitalize"
+                >
+                  Get started
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Responsive dropdown menu */}
@@ -80,16 +117,40 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 relative right-0 shadow bg-base-100 rounded-box w-52"
             >
               {menu}
-              <li>
-                <Link to='/login' className="btn btn-outline border-[#9D0AFF] text-[#9D0AFF] capitalize">
+              {user ? (
+              <>
+                <Link
+                  to="/dashboard/update-heading"
+                  className="btn bg-[#9D0AFF] border-none capitalize"
+                >
+                  Dashbord
+                </Link>
+                <button
+                onClick={handleSignOut}
+                  className="btn bg-red-500 border-none mt-4 capitalize"
+                >
+                  Sign Out
+                </button>
+
+
+              </>
+            ) : (
+              <>
+                {" "}
+                <Link
+                  to="/login"
+                  className="btn btn-outline border-[#9D0AFF] text-[#9D0AFF] capitalize"
+                >
                   Login
                 </Link>
-              </li>
-              <li>
-                <Link to='/signup' className="btn  relative bg-[#9D0AFF] border-none mt-2 text-white capitalize">
+                <Link
+                  to="/signup"
+                  className="btn bg-[#9D0AFF] border-none mt-4 capitalize"
+                >
                   Get started
                 </Link>
-              </li>
+              </>
+            )}
             </ul>
           </div>
         </div>

@@ -7,12 +7,12 @@ const HeroSection = () => {
   const [buttonClicked, setButtonClicked] = useState(1);
 
   const [buttonTapped, setButtonTapped] = useState(0);
-  
+
   useEffect(() => {
     fetch("http://localhost:5000/buttonTapped")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         setButtonTapped(data);
       });
   }, [buttonClicked]);
@@ -32,7 +32,7 @@ const HeroSection = () => {
   const handleButtonClick = async (event) => {
     event.preventDefault();
 
-    setButtonClicked(prev => prev + 1)
+    setButtonClicked((prev) => prev + 1);
 
     const result = {
       buttonTapped: 1,

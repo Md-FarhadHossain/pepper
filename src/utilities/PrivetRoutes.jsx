@@ -2,6 +2,7 @@ import { useContext, useState } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import { UserContext } from '../context/AuthContext'
 
+
 const PrivetRoutes = ({children}) => {
     const { user,loading} = useContext(UserContext)
     const location = useLocation()

@@ -12,9 +12,9 @@ const CounterUpdate = () => {
   }, []);
 
   return (
-    <div className="w-full container mx-auto px-24 mt-16">
+    <div className="w-full container mx-auto lg:px-24 md:px-14 px-4 mt-16">
       <h1 className="text-4xl mb-16 font-bold text-center ">
-      "Request a demo" button {buttonTapped?.length} time's clicked
+        "Request a demo" button {buttonTapped?.length} time's clicked
       </h1>
       <h1 className="text-center text-5xl"> {buttonTapped?.length}</h1>
     </div>

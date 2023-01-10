@@ -14,8 +14,6 @@ const Signup = () => {
     const userInfo = {
       email: e.target.email.value,
       password: e.target.password.value,
-      name: e.target.name.value,
-      photoLink: e.target.photoLink.value,
     };
     console.log(userInfo);
     signup(userInfo.email, userInfo.password)
@@ -41,28 +39,7 @@ const Signup = () => {
       <h1 className="text-4xl mb-6 font-bold">Signup Now</h1>
       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <form onSubmit={handleSignup} className="card-body">
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Full Name</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              className="input input-bordered"
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Photo Link</span>
-            </label>
-            <input
-              type="link"
-              name="photoLink"
-              placeholder="Photo Link"
-              className="input input-bordered"
-            />
-          </div>
+
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
