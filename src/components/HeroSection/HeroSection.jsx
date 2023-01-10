@@ -9,7 +9,7 @@ const HeroSection = () => {
   const [buttonTapped, setButtonTapped] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/buttonTapped")
+    fetch("https://server-md-farhadhossain.vercel.app/buttonTapped")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -18,7 +18,7 @@ const HeroSection = () => {
   }, [buttonClicked]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/heading")
+    fetch("https://server-md-farhadhossain.vercel.app/heading")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -38,7 +38,7 @@ const HeroSection = () => {
       buttonTapped: 1,
     };
 
-    await fetch("http://localhost:5000/buttonTapped", {
+    await fetch("https://server-md-farhadhossain.vercel.app/buttonTapped", {
       method: "POST",
       headers: {
         "content-type": "application/json",

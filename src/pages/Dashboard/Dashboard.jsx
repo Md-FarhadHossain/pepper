@@ -24,17 +24,15 @@ const Dashboard = () => {
           <ul className="menu p-4 w-80 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
-              <label htmlFor="my-drawer-2">
-                <Link htmlFor="my-drawer-2" to="update-heading">Update Main heading</Link>
-              </label>
+              <Link htmlFor="my-drawer-2" to="update-heading">
+                Update Main heading
+              </Link>
             </li>
             <li>
-              <label htmlFor="my-drawer-2">
               <Link to="update-logo">Update Logo</Link>
-              </label>
             </li>
             <li>
-              <label htmlFor="my-drawer-2"><Link to="counter-update">Counter Update</Link></label>
+              <Link to="counter-update">Counter Update</Link>
             </li>
           </ul>
         </div>

@@ -1,5 +1,6 @@
 import { async } from "@firebase/util";
 import React, { useContext, useState } from "react";
+import { toast } from "react-hot-toast";
 import { UserContext } from "../../../context/AuthContext";
 
 const UpdateLogo = () => {
@@ -40,7 +41,7 @@ const UpdateLogo = () => {
       logo: logoImage,
     };
 
-    await fetch("http://localhost:5000/logo/63bca165461922059da74ccf", {
+    await fetch("https://server-md-farhadhossain.vercel.app/logo/63bca165461922059da74ccf", {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -52,6 +53,7 @@ const UpdateLogo = () => {
         console.log(data);
         if (data.acknowledged) {
           setLogoUpload(!logoUpload);
+          toast.success('Logo Updated!')
         }
       });
   };

@@ -4,6 +4,7 @@ import cartIcon from "../../assets/cart-icon.png";
 import hamburger from "../../assets/hamburger-menu.png";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../context/AuthContext";
+import { toast } from "react-hot-toast";
 
 const Navbar = () => {
   const { logoImage, logoUpload, user, signout} = useContext(UserContext);
@@ -11,7 +12,7 @@ const Navbar = () => {
   const [logo, setLogo] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/logo")
+    fetch("https://server-md-farhadhossain.vercel.app/logo")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -23,7 +24,10 @@ const Navbar = () => {
   const handleSignOut = (event) => {
     event.preventDefault()
     signout()
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result)
+        toast.success('Singed out')
+      })
       .catch((err) => console.log(err));
   }
 

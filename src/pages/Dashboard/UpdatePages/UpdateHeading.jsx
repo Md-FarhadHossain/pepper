@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 
 const UpdateHeading = () => {
   const [heading, setHeading] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/heading")
+    fetch("https://server-md-farhadhossain.vercel.app/heading")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -21,7 +22,7 @@ const UpdateHeading = () => {
     };
     console.log(heading);
 
-    fetch("http://localhost:5000/heading/63bc591f461922059d5804d0", {
+    fetch("https://server-md-farhadhossain.vercel.app/heading/63bc591f461922059d5804d0", {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -31,6 +32,9 @@ const UpdateHeading = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.acknowledged){
+          toast.success('Heading Saved Successfully!')
+        }
       });
   };
 

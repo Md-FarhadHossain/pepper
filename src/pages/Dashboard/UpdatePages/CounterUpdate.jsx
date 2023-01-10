@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const CounterUpdate = () => {
   const [buttonTapped, setButtonTapped] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/buttonTapped")
+    fetch("https://server-md-farhadhossain.vercel.app/buttonTapped")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

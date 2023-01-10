@@ -1,14 +1,15 @@
 import React from "react";
 import { useContext } from "react";
+import { toast } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/AuthContext";
 
 
 const Signup = () => {
-  const { signup, signinWithGoogle, signout } = useContext(UserContext);
+  const { signup, signinWithGoogle } = useContext(UserContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/dashboard";
+  const from = location.state?.from?.pathname || "/dashboard/update-heading";
   const handleSignup = (e) => {
     e.preventDefault();
     const userInfo = {
@@ -19,10 +20,8 @@ const Signup = () => {
     signup(userInfo.email, userInfo.password)
       .then((result) => {
         console.log(result);
-        const user = result.user;
-        const currentUser = {
-          email: user.email,
-        };
+        toast.success('Signup Successfully!')
+        navigate(from, { replace: true });
       })
       .catch((err) => console.log(err));
   };
@@ -30,6 +29,7 @@ const Signup = () => {
     e.preventDefault();
     signinWithGoogle().then((result) => {
       console.log(result);
+      toast.success('Signup Successfully!')
       navigate(from, { replace: true });
     });
   };
